@@ -1,0 +1,847 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #F5F5F6;
+}
+
+button:focus {
+    outline: 0
+}
+
+/* header */
+
+header {
+    padding: 15px;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 10px 10px 0px rgba(35, 31, 32, 0.1);
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+header button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    line-height: normal;
+}
+
+
+nav ul li img {
+    height: 2.5em;
+    cursor: pointer;
+}
+
+/*
+nav ul li img:hover {
+    height: 2.7em;
+}*/
+
+header nav ul li:nth-of-type(2) {
+    margin-right: auto;
+}
+
+
+header nav ul li:nth-of-type(4) {
+    margin-left: auto;
+}
+
+.header-section {
+    margin-top: 12px;
+}
+
+/* Login */
+
+#login form legend {
+    margin-bottom: 8px;
+}
+
+#login form input:nth-of-type(-n+2) {
+    width: 100%;
+    border: none;
+    border-bottom: #b6b6b8 2px solid;
+    padding: 9px 12px;
+    margin-bottom: 16px;
+    transition: color .3s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1);
+}
+
+#login form input:nth-of-type(-n+2):focus {
+    border: 1.5px solid #009DDB;
+}
+
+#login form input:nth-of-type(-n+2):hover {
+    background-color: #D4EFFC;
+}
+
+input::placeholder {
+    color: #919294;
+    font-style: italic;
+}
+
+#login form a {
+    display: block;
+    margin-bottom: 8px;
+    color: #13679c;
+}
+
+#login form a:hover {
+    color: #00477f;
+}
+
+
+/* Filter */
+
+fieldset {
+    background-color: white;
+    border: 0;
+}
+
+fieldset fieldset {
+    border: none;
+}
+
+input[type=submit] {
+    padding: 12px 24px;
+    width: 100%;
+    background-color: #00477F;
+    color: white;
+    border-radius: 3px;
+    border-style: none;
+    font-weight: bolder;
+    display: block;
+    margin: 16px auto 12px auto;
+    cursor: pointer;
+    transition: color .3s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1)
+}
+
+input[type=submit]:hover {
+    background-color: #D4EFFC;
+    color: #00477F;
+}
+
+#filter {
+    width: 100%;
+}
+
+i.fa.fa-times {
+    color: #009DDB;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+
+/* Genre */
+
+.title-line {
+    border-bottom: 1px solid #b6b6b8;
+    padding-bottom: 4px;
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+fieldset fieldset input {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 2px #6d6e71 solid;
+    border-radius: 4px;
+    background: #fff;
+    transition: border-color .3s cubic-bezier(.39, .575, .565, 1);
+}
+
+
+label.checkbox {
+    cursor: pointer;
+    padding: 12px;
+    border: 2px #ebebec solid;
+    border-radius: 4px;
+    background: #fff;
+    margin: 12px 0px;
+    display: flex;
+    transition: color .2s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1);
+}
+
+label.checkbox:hover {
+    background-color: #E8F0FE;
+}
+
+/* Geselecteerde checkbox styling */
+
+input [type="checkbox"]:checked + label {
+    border: 2px #00477F solid;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+
+
+/* Leesduur */
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ed1a2d;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+#slideContainer {
+    padding: 0px 10px;
+}
+
+#leesduurInput {
+    margin-bottom: 24px;
+}
+
+/* Sorteer op */
+
+fieldset input[type="radio"] {
+    margin-right: 0;
+    cursor: pointer;
+}
+
+label[for=rating],
+label[for=titles],
+label[for=story] {
+    margin-right: 12px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+
+/* Zoeken / Search */
+
+#search {
+    background: white;
+    width: 100%;
+    padding: 9px 12px;
+}
+
+#search form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#submitSearch img {
+    height: 2.5em;
+    cursor: pointer;
+}
+
+form input[type="search"] {
+    width: 85%;
+    border: grey 1px solid;
+    padding: 4px 12px;
+    transition: color .3s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1);
+}
+
+form input[type="search"]:hover {
+    background-color: #D4EFFC;
+}
+
+form input[type="search"]:focus {
+    border: 1.5px solid #009DDB;
+}
+
+
+
+
+/* Verwijdert de 'X' van Internet Explorer */
+
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Verwijdert de 'X' van Chrome */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+
+#search form i.fa.fa-times {
+    margin-top: 5px;
+}
+
+/* 99 verhalen */
+
+main {
+    margin-top: 82px;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    margin: 0px 12px;
+}
+
+main section article {
+    position: relative;
+}
+
+
+/* toevoegen aan leeslijst knop */
+
+/* #likeButton {
+    display: block;
+    border-radius: 50%;
+    border-style: none;
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+    font-size: 2em;
+    background-image: url(images/leeslijst_niet%20geselecteerd.png)
+} */
+
+#likeButtonDiv {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    border-radius: 50%;
+    border-style: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+}
+
+
+#likeButtonDiv:hover {
+    width: 54px;
+    height: 54px;
+    top: 10px;
+    right: 10px;
+}
+
+/* Verhaalblokken */
+
+article {
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(35, 31, 32, 0.1);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(35, 31, 32, 0.1);
+    box-shadow: 0px 10px 30px 0px rgba(35, 31, 32, 0.1);
+}
+
+.storyPreview {
+    width: 100%;
+    border-radius: 0.3em;
+    height: 300px;
+}
+
+article p {
+    text-align: left;
+}
+
+article a {
+    border-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2 {
+    font-size: 18px;
+    color: #00477f;
+    margin-bottom: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-right: 0px;
+    border-bottom: 2px #ed1a2d solid;
+    display: block;
+    width: 112px;
+    margin-left: 12px;
+}
+
+
+article {
+    padding-bottom: 24px;
+}
+
+article h3 {
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: #00477f;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+/* Rating */
+
+footer span span {
+    max-width: 200px;
+    min-width: 160px;
+}
+
+footer span span img {
+    width: 28px;
+}
+
+p img {
+    height: 1.75em;
+}
+
+/* Leestijd */
+
+#reading-duration {
+    display: flex;
+    align-items: center;
+}
+
+#reading-duration img {
+    width: 22px;
+    margin-right: 12px;
+}
+
+/* Verhaal detailpagina */
+
+#verhaalInfo {
+    background-color: #00477F;
+    padding: 12px;
+    color: white;
+    margin-top: 75px;
+
+}
+
+#storyDetailed {
+    width: 100%;
+    position: relative;
+    margin-top: -82px;
+    padding-bottom: 0px;
+}
+
+/* Informatie detailpagina */
+
+#verhaalInfo {
+    width: 100%;
+}
+
+#verhaalInfo footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#starsWidth {
+    max-width: 200px;
+    min-width: 160px;
+}
+
+#verhaalInfo span span img {
+    width: 28px;
+}
+
+#first-part p {
+    padding-top: 12px;
+}
+
+
+/* Beoordeel verhaal */
+
+#beoordeel-verhaal button {
+    padding: 12px 24px;
+    width: 100%;
+    background-color: white;
+    color: #00477F;
+    border-radius: 3px;
+    border-style: none;
+    font-weight: bolder;
+    display: block;
+    margin: 12px auto;
+    ;
+    cursor: pointer;
+    transition: color .3s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1);
+}
+
+#beoordeel-verhaal button:hover {
+    background-color: #D4EFFC;
+}
+
+
+#details-detailpagina {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 3px;
+    z-index: 10;
+    background-color: white;
+    color: black;
+    width: 500px;
+    max-width: 80%;
+}
+
+#modal-header {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    cursor: pointer;
+    border: none;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#modal-review-stars-text {
+    text-align: center;
+    color: #919294
+}
+
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 9;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+#closeReview {
+    margin-left: auto;
+}
+
+/* Sterren review - bron: https://codepen.io/knyttneve/pen/EBNqPN*/
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.rating {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row-reverse;
+    height: 150px;
+    position: relative;
+}
+
+.rating-0 {
+    filter: grayscale(100%);
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > input:not(:checked) ~ label:hover,
+.rating > input:not(:checked) ~ label:hover ~ label {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23d8b11e' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+.rating > label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-top: auto;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23e3e3e3' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 76%;
+    transition: .3s;
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23fcd93a' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+
+.emoji-wrapper {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.emoji-wrapper:before,
+.emoji-wrapper:after {
+    content: "";
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.emoji-wrapper:before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0) 100%);
+}
+
+.emoji-wrapper:after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0) 100%);
+}
+
+.emoji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+}
+
+.emoji > svg {
+    margin: 15px 0;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+#rating-1:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-100px);
+}
+
+#rating-2:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-200px);
+}
+
+#rating-3:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-300px);
+}
+
+#rating-4:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-400px);
+}
+
+#rating-5:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-500px);
+}
+
+.feedback {
+    max-width: 360px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+/* Footer */
+
+#bottom-footer {
+    margin: 12px 0px 12px 12px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 500px) {
+    #beoordeel-verhaal {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* Verhalen */
+    main section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px 12px;
+    }
+
+    /* Filter & Login */
+    #filter,
+    #login {
+        width: 50%;
+        position: absolute;
+        right: 1%;
+        margin-right: 5%;
+    }
+
+    #login form,
+    #filter form {
+        background-color: white;
+        border-radius: 3px;
+        padding: 12px;
+    }
+
+
+    /* Header */
+    #login form,
+    #filter form {
+        box-shadow: 0px 10px 10px 0px rgba(35, 31, 32, 0.1);
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header nav ul li:nth-child(1) {
+        order: 2;
+    }
+    header nav ul li:nth-child(2) {
+        order: 3;
+        margin-right: 0px;
+    }
+    header nav ul li:nth-child(3) {
+        order: 1;
+    }
+    header nav ul li:nth-child(4) {
+        order: 4;
+        margin-left: 0px;
+    }
+    header nav ul li:nth-child(5) {
+        order: 5;
+    }
+
+    header nav ul li:nth-of-type(1) {
+        margin-left: auto;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Alle verhalen */
+    main section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+        margin: 0px;
+    }
+
+    /* Filter & Login */
+    #filter,
+    #login {
+        margin-right: 10%;
+        width: 30%;
+    }
+
+    main,
+    header,
+    #bottom-footer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    h1,
+    #bottom-footer {
+        margin-left: 0px;
+    }
+
+    /* Detailpagina */
+    #verhaalInfo {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
